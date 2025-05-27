@@ -40,6 +40,11 @@ const features = [
     },
     {
         ico: Scrum,
+        title: 'CI-DC',
+        description: 'Con GitHub Actions, Docker para la integración y despliegue continuo.',
+    },
+    {
+        ico: Scrum,
         title: 'Metodologías Ágiles',
         description: 'Trabajo en equipo utilizando metodologías ágiles como Scrum.',
     },

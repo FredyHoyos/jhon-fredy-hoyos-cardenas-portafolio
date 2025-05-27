@@ -8,7 +8,9 @@ import Portafolio from '@/components/organisms/Portafolio';
 import Footer from '@/components/organisms/Footer';
 import NavBar from '@/components/organisms/NavBar';
 import Contact from '@/components/organisms/Contac';
+import Experience from '@/components/organisms/Experience';
 import ColorCustomizer from '@/components/atoms/ColorCustomizer';
+
 import { User, X } from 'lucide-react';
 
 export default function Home() {
@@ -58,6 +60,10 @@ export default function Home() {
 
           <div id="education">
             <Education />
+          </div>
+
+          <div>
+            <Experience />
           </div>
 
           <div id="portafolio">

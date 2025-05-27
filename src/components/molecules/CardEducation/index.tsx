@@ -32,7 +32,7 @@ const index = () => {
             
         {features.map(({title, ocupation, time, qualification, description}, index) => (
             <div  key={index} className='flex flex-col backdrop-blur-xl bg-white/20 border-white/10 shadow-xl'>
-            <div className='flex flex-row justify-around items-centerrounded-lg p-10  transition-transform duration-300 hover:scale-105 hover:border-primary'>
+            <div className='flex md:flex-row flex-col items-center space-y-4 justify-around items-centerrounded-lg p-10  transition-transform duration-300 hover:scale-105 hover:border-primary'>
         
                 <div className='flex flex-col space-y-4 w-1/2'>
                   <SubTitle text={title} />
