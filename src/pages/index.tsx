@@ -1,114 +1,78 @@
-import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import React, { useState } from 'react';
+import PresentationProfile from '@/components/organisms/PresentationProfile';
+import Networks from '@/components/organisms/Networks';
+import TargetPresentation from '@/components/organisms/TargetPresentation';
+import Knowledge from '@/components/organisms/Knowledge';
+import Education from '@/components/organisms/Education';
+import Portafolio from '@/components/organisms/Portafolio';
+import Footer from '@/components/organisms/Footer';
+import NavBar from '@/components/organisms/NavBar';
+import Contact from '@/components/organisms/Contac';
+import ColorCustomizer from '@/components/atoms/ColorCustomizer';
+import { User, X } from 'lucide-react';
 
 export default function Home() {
-  return (
-    <div
-      className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
-    >
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/pages/index.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const [showProfile, setShowProfile] = useState(false);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  return (
+    <>
+      <NavBar />
+
+      {/* Botón visible solo en pantallas pequeñas */}
+      <div className="fixed top-14 left-1 z-50 md:hidden">
+        <button
+          onClick={() => setShowProfile(!showProfile)}
+          className="bg-primary text-white px-4 py-2 rounded shadow-lg"
+        >
+            {showProfile ? <X size={20} /> : <User size={20} />}
+        </button>
+      </div>
+
+      <div className="flex flex-row lg:space-x-6 md:mr-20 lg:p-8 md:ml-72">
+
+        {/* Mostrar PresentationProfile según tamaño y toggle */}
+        <div className="hidden md:block">
+          <PresentationProfile />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        {showProfile && (
+          <div className="block md:hidden fixed top-16 left-4 right-4 bg-white z-40 p-4 rounded-lg shadow-xl">
+            <PresentationProfile />
+          </div>
+        )}
+
+        <div className="flex flex-col space-y-6 flex-1">
+          <div className="h-8"></div>
+
+          <div id="target" className="relative">
+            <TargetPresentation />
+          </div>
+
+          <div className="flex flex-col items-center justify-center">
+            <ColorCustomizer />
+          </div>
+
+          <div id="knowledge">
+            <Knowledge />
+          </div>
+
+          <div id="education">
+            <Education />
+          </div>
+
+          <div id="portafolio">
+            <Portafolio />
+          </div>
+
+          <div id="contact">
+            <Contact />
+          </div>
+
+          <Footer />
+        </div>
+
+        <Networks />
+      </div>
+    </>
   );
 }
