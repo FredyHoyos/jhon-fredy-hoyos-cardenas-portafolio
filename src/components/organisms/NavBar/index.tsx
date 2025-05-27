@@ -30,6 +30,7 @@ const Index = () => {
         <li><a href="#target" onClick={closeMenu} className="hover:text-primary transition">Presentación</a></li>
         <li><a href="#knowledge" onClick={closeMenu} className="hover:text-primary transition">Conocimientos</a></li>
         <li><a href="#education" onClick={closeMenu} className="hover:text-primary transition">Educación</a></li>
+        <li><a href="#certification" onClick={closeMenu} className="hover:text-primary transition">Certificación</a></li>
         <li><a href="#portafolio" onClick={closeMenu} className="hover:text-primary transition">Portafolio</a></li>
         <li><a href="#contact" onClick={closeMenu} className="hover:text-primary transition">Contacto</a></li>
       </ul>

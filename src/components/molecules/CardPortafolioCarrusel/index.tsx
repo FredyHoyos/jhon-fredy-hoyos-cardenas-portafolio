@@ -125,7 +125,7 @@ const CardCarousel = ({ cards: propCards }: CardCarouselProps) => {
           onClick={goToPrevious}
           variant="outline"
           size="icon"
-          className="absolute left-4 top-1/2 -translate-y-1/2 z-30 bg-white/80 hover:bg-white border-white/50 shadow-lg backdrop-blur-sm md:left-8"
+          className="absolute left-4 top-1/2 -translate-y-1/2 z-30 bg-primary hover:bg-white border-white/50 shadow-lg backdrop-blur-sm md:left-8"
         >
           <ArrowLeft className="h-5 w-5" />
         </Button>
@@ -134,7 +134,7 @@ const CardCarousel = ({ cards: propCards }: CardCarouselProps) => {
           onClick={goToNext}
           variant="outline"
           size="icon"
-          className="absolute right-4 top-1/2 -translate-y-1/2 z-30 bg-white/80 hover:bg-white border-white/50 shadow-lg backdrop-blur-sm md:right-8"
+          className="absolute right-4 top-1/2 -translate-y-1/2 z-30 bg-primary hover:bg-white border-white/50 shadow-lg backdrop-blur-sm md:right-8"
         >
           <ArrowRight className="h-5 w-5" />
         </Button>

@@ -17,6 +17,10 @@ const features = [
     },
     {
         urlImage: "/icoskills.svg",
+        info: 'CI-DC GitHub actions',
+    },
+    {
+        urlImage: "/icoskills.svg",
         info: 'PostgreSQL, Prisma',
     },
     {

@@ -22,7 +22,7 @@ const AboutModal = () => {
             >
               <X size={24} />
             </button>
-            <h2 className="text-2xl font-bold mb-4 text-blue-700">Más sobre mí</h2>
+            <h2 className="text-2xl font-bold mb-4 text-primary">Más sobre mí</h2>
             <p className="text-gris mb-3 leading-relaxed">
               Soy una persona apasionada por la tecnología y el desarrollo de software, actualmente cursando séptimo semestre de Ingeniería de Sistemas en la Universidad de Antioquia. Me gusta mucho el desarrollo Full-Stack tanto el frontend como backend. Tengo un enfoque particular en la automatización de procesos. En mis tiempos libres me gusta hacer ejercicio, tocar la guitarra y trabajar en proyectos personales que me permitan seguir aprendiendo y creciendo profesionalmente.
             </p>

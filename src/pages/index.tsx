@@ -9,6 +9,7 @@ import Footer from '@/components/organisms/Footer';
 import NavBar from '@/components/organisms/NavBar';
 import Contact from '@/components/organisms/Contac';
 import Experience from '@/components/organisms/Experience';
+import Certification from '@/components/organisms/Certification';
 import ColorCustomizer from '@/components/atoms/ColorCustomizer';
 
 import { User, X } from 'lucide-react';
@@ -60,6 +61,10 @@ export default function Home() {
 
           <div id="education">
             <Education />
+          </div>
+
+          <div id="certification">
+            <Certification />
           </div>
 
           <div>

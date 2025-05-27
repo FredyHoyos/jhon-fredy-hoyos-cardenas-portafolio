@@ -10,6 +10,8 @@ import Scrum from '@/assets/svg/scrum.svg';
 import Back from '@/assets/svg/backend.svg';
 import Team from '@/assets/svg/team.svg';
 import Learning from '@/assets/svg/learning.svg';
+import Infinity from '@/assets/svg/infinity.svg';
+
 
 
 const features = [
@@ -39,7 +41,7 @@ const features = [
         description: 'Manejo de bases de datos relacionales como PostgreSQL.',
     },
     {
-        ico: Scrum,
+        ico: Infinity,
         title: 'CI-DC',
         description: 'Con GitHub Actions, Docker para la integración y despliegue continuo.',
     },
