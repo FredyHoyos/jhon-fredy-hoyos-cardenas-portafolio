@@ -17,7 +17,7 @@ const index = () => {
         {/* Títulos principales, con un layout flexible que centra y separa los títulos */}
         <div className="flex flex-wrap items-center justify-center gap-2">
           {/* Título normal */}
-          <SuperTitle text="Hola, soy Fredy Hoyos desarrollador" />
+          <SuperTitle text="Hola, soy Fredy Hoyos desarrollador junior" />
           {/* Título destacado con color primario */}
           <SuperTitle text="Full-Stack" color="primary" />
         </div>
