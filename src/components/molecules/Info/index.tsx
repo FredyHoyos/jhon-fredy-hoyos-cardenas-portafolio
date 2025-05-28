@@ -9,7 +9,7 @@ const features = [
   },
   {
     title: 'Residencia:',
-    text: 'El santuario',
+    text: 'El santuario (CO)',
   },
   {
     title: 'Freelancer:',
