@@ -1,3 +1,37 @@
+# Portafolio de Jhon Fredy Hoyos Cárdenas
+
+Este proyecto ya está desplegado en el siguiente link:  https://jhon-fredy-hoyos-cardenas-portafolio.vercel.app/ 
+
+Bienvenido al repositorio de mi portafolio personal, donde comparto mis proyectos y experiencias como desarrollador web. Este sitio está construido con **Next.js**, **Tailwind CSS** y **TypeScript**, y está alojado en **Vercel**.
+
+## 🚀 Tecnologías utilizadas
+
+- **Next.js**: Framework de React para aplicaciones web.
+- **Tailwind CSS**: Framework de diseño para una interfaz moderna y responsiva.
+- **TypeScript**: Lenguaje que mejora la calidad del código con tipado estático.
+- **Vercel**: Plataforma de despliegue para aplicaciones frontend.
+
+## 🛠️ Instalación y ejecución local
+
+Para ejecutar este proyecto en tu máquina local, sigue estos pasos:
+
+1. Clona el repositorio:
+   git clone https://github.com/FredyHoyos/jhon-fredy-hoyos-cardenas-portafolio.git
+   cd jhon-fredy-hoyos-cardenas-portafolio
+
+2. Instala las dependencias:
+
+   npm install
+
+3. Ejecuta el servidor de desarrollo:
+   npm run dev
+
+3. Abre tu navegador y visita http://localhost:3000 para ver el portafolio en acción.
+   
+![alt text](image.png)
+
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
 
 ## Getting Started

@@ -6,6 +6,7 @@ interface Props {
   url?: string;
 }
 
+//Este componente es el botón, recibe el texto y una URL para mandar a una página especificada.
 const Index = ({ text, url }: Props) => {
   const content = (
     <span className="text-primary text-[18px] transition-transform duration-300 hover:scale-110 inline-flex items-center gap-1">

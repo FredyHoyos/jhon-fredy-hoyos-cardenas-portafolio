@@ -6,6 +6,7 @@ import { SubTitle, Text } from '@/components/atoms/Titles'
 import Back from '@/assets/picture/Image.png'
 import ButtonLearnMore from '@/components/atoms/ButtonLearnMore'
 
+// Datos que alimentan el slider
 const features = [
   {
     img: Back,
@@ -40,6 +41,7 @@ const features = [
 ]
 
 const CardPortafolio = () => {
+  // Configuración del carrusel con Keen Slider
   const [sliderRef] = useKeenSlider({
     slides: {
       perView: 3,
@@ -64,18 +66,21 @@ const CardPortafolio = () => {
             key={index}
             className="keen-slider__slide backdrop-blur-xl bg-white/20 border-white/10 shadow-xl rounded-lg border hover:border-primary flex flex-col items-center space-y-4"
           >
-            <div className="w-full h-40 relative  transition-transform duration-300 hover:scale-110">
-                <Image 
-                    src={item.img} 
-                    alt={item.title} 
-                    fill
-                    className="object-cover rounded-md" 
-                />
+            {/* Imagen superior de la tarjeta */}
+            <div className="w-full h-40 relative transition-transform duration-300 hover:scale-110">
+              <Image 
+                src={item.img} 
+                alt={item.title} 
+                fill
+                className="object-cover rounded-md" 
+              />
             </div>
-            <div className='p-4 space-y-2'>
-                <SubTitle text={item.title} />
-                <Text text={item.description} />
-                <ButtonLearnMore text='Saber más' />
+
+            {/* Contenido textual */}
+            <div className="p-4 space-y-2 text-center">
+              <SubTitle text={item.title} />
+              <Text text={item.description} />
+              <ButtonLearnMore text="Saber más" />
             </div>
           </div>
         ))}
@@ -83,6 +88,5 @@ const CardPortafolio = () => {
     </div>
   )
 }
-
 
 export default CardPortafolio

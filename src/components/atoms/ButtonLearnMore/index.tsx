@@ -6,6 +6,7 @@ interface Props {
   url?: string;
 }
 
+//Botón para enviar a una URL especificada
 const Index = ({ text, url }: Props) => {
   const content = (
     <span className="text-primary text-[18px] transition-transform duration-300 hover:scale-110 inline-flex items-center gap-1">

@@ -1,11 +1,12 @@
 import React from 'react';
 import { Download } from 'lucide-react';
 
+//Este botón es el encargado de descargar en CV
 const DownloadCV = () => {
   return (
     <div className="flex justify-center mt-6">
       <a
-        href="/CV-JhonFredyHoyos.pdf"
+        href="/CV-JhonFredyHoyos.pdf" 
         download
         className="inline-flex items-center bg-primary border-2 hover:border-green-400 transition-transform duration-300 hover:scale-110  text-white py-2 px-6 rounded"
       >
