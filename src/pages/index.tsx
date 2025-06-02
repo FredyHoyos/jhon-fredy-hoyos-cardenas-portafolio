@@ -26,7 +26,7 @@ export default function Home() {
       <NavBar />
 
       {/* Botón flotante visible solo en dispositivos móviles (pantallas pequeñas) para mostrar/ocultar perfil */}
-      <div className="fixed top-14 left-1 z-50 md:hidden">
+      <div className="fixed top-14 left-1 z-50 lg:hidden">
         <button
           onClick={() => setShowProfile(!showProfile)} // Alterna el estado showProfile
           className="bg-primary text-white px-4 py-2 rounded shadow-lg"
@@ -37,16 +37,16 @@ export default function Home() {
       </div>
 
       {/* Contenedor principal con layout en fila y espacio entre secciones en pantallas grandes */}
-      <div className="flex flex-row lg:space-x-6 md:mr-20 lg:p-8 md:ml-72">
+      <div className="flex flex-row lg:space-x-6 md:mr-20 lg:p-8 lg:ml-72">
 
         {/* Mostrar PresentationProfile fijo y visible solo en tablets y escritorio */}
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <PresentationProfile />
         </div>
 
         {/* Mostrar PresentationProfile como modal flotante en móviles si showProfile es true */}
         {showProfile && (
-          <div className="block md:hidden fixed top-16 left-4 right-4 bg-white z-40 p-4 rounded-lg shadow-xl">
+          <div className="block lg:hidden fixed top-16 left-4 right-4 z-40 p-4 rounded-lg shadow-xl">
             <PresentationProfile />
           </div>
         )}

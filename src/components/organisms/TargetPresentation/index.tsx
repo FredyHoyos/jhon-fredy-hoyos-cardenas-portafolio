@@ -12,14 +12,14 @@ const index = () => {
     <div className='flex lg:flex-row flex-col p-10 backdrop-blur-md bg-white/20 border-white/10 shadow-xl pt-16'>
       
       {/* Contenedor principal del texto, que ocupa dos tercios en pantallas grandes */}
-      <div className='lg:w-2/3 space-y-4'>
+      <div className='lg:w-2/3 lg:h-full space-y-4 pr-4'>
         
         {/* Títulos principales, con un layout flexible que centra y separa los títulos */}
         <div className="flex flex-wrap items-center justify-center gap-2">
           {/* Título normal */}
-          <SuperTitle text="Hola, soy Fredy Hoyos desarrollador junior" />
+          <SuperTitle text="Hola, soy Fredy Hoyos estudiante de " />
           {/* Título destacado con color primario */}
-          <SuperTitle text="Full-Stack" color="primary" />
+          <SuperTitle text="Ingeniería de Sistemas" color="primary" />
         </div>
         
         {/* Párrafo descriptivo */}
@@ -35,13 +35,14 @@ const index = () => {
       </div>
       
       {/* Contenedor de la imagen, ocupa un tercio en pantallas grandes */}
-      <div className='relative lg:w-1/3 h-96'>
+      <div className='relative lg:w-1/3 flex justify-center'>
         {/* Imagen optimizada con 'fill' para ocupar todo el contenedor, con objeto cubierto */}
         <Image
           src="/fotosinfondo.png"
           alt="Image"
-          fill
-          className="object-cover"
+          width={300}
+          height={300}
+          className="h-full mask-gradient-bottom object-cover"
         />
       </div>
     </div>
